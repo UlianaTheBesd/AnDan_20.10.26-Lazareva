@@ -1,0 +1,87 @@
+PS D:\code_for_ANDAN> & C:/Users/TECNO/AppData/Local/Programs/Python/Python312/python.exe d:/code_for_ANDAN/main.py
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1792592229.360766   13332 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1792592244.267384   13332 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+'nlp' extra dependency package 'fasttext-numpy2' isn't installed. Look at README.md in repo 'LightAutoML' for installation instructions.
+'nlp' extra dependency package 'nltk' isn't installed. Look at README.md in repo 'LightAutoML' for installation instructions.
+'nlp' extra dependency package 'transformers' isn't installed. Look at README.md in repo 'LightAutoML' for installation instructions.
+C:\Users\TECNO\AppData\Local\Programs\Python\Python312\Lib\site-packages\lightautoml\ml_algo\dl_model.py:40: UserWarning: 'transformers' - package isn't installed
+  warnings.warn("'transformers' - package isn't installed")
+C:\Users\TECNO\AppData\Local\Programs\Python\Python312\Lib\site-packages\lightautoml\text\embed.py:24: UserWarning: 'transformers' - package isn't installed
+  warnings.warn("'transformers' - package isn't installed")
+C:\Users\TECNO\AppData\Local\Programs\Python\Python312\Lib\site-packages\lightautoml\text\dl_transformers.py:25: UserWarning: 'transformers' - package isn't installed
+  warnings.warn("'transformers' - package isn't installed")
+C:\Users\TECNO\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\jit\_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+I0000 00:00:1792592260.953336   13332 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE3 SSE4.1 SSE4.2 AVX AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:TensorFlow GPU support is not available on native Windows for TensorFlow >= 2.11. Even if CUDA/cuDNN are installed, GPU will not be used. Please use WSL2 or the TensorFlow-DirectML plugin.
+[17:17:57] Stdout logging level is INFO.
+[17:17:57] Copying TaskTimer may affect the parent PipelineTimer, so copy will create new unlimited TaskTimer
+[17:17:57] Task: binary
+
+[17:17:57] Start automl preset with listed constraints:
+[17:17:57] - time: 600.00 seconds
+[17:17:57] - CPU: 4 cores
+[17:17:57] - memory: 16 GB
+
+[17:17:57] Train data shape: (189, 1281)
+
+[17:18:04] Layer 1 train process start. Time left 593.43 secs
+[17:18:05] Start fitting Lvl_0_Pipe_0_Mod_0_LinearL2 ...
+[17:18:08] Fitting Lvl_0_Pipe_0_Mod_0_LinearL2 finished. score = 0.9342229570146433
+[17:18:08] Lvl_0_Pipe_0_Mod_0_LinearL2 fitting and predicting completed
+[17:18:08] Time left 589.00 secs
+
+[17:18:09] Selector_LightGBM fitting and predicting completed
+[17:18:09] Start fitting Lvl_0_Pipe_1_Mod_0_LightGBM ...
+[17:18:10] Fitting Lvl_0_Pipe_1_Mod_0_LightGBM finished. score = 0.9076523382144545
+[17:18:10] Lvl_0_Pipe_1_Mod_0_LightGBM fitting and predicting completed
+[17:18:10] Start hyperparameters optimization for Lvl_0_Pipe_1_Mod_1_Tuned_LightGBM ... Time budget is 128.84 secs
+Optimization Progress: 100%|██████████████████████████████████████████████████████████████████████| 101/101 [00:06<00:00, 14.45it/s, best_trial=72, best_value=0.959]
+[17:18:17] Hyperparameters optimization for Lvl_0_Pipe_1_Mod_1_Tuned_LightGBM completed
+[17:18:17] Start fitting Lvl_0_Pipe_1_Mod_1_Tuned_LightGBM ...
+[17:18:17] Fitting Lvl_0_Pipe_1_Mod_1_Tuned_LightGBM finished. score = 0.9217052432687765
+[17:18:17] Lvl_0_Pipe_1_Mod_1_Tuned_LightGBM fitting and predicting completed
+[17:18:17] Start fitting Lvl_0_Pipe_1_Mod_2_CatBoost ...
+[17:18:20] Fitting Lvl_0_Pipe_1_Mod_2_CatBoost finished. score = 0.9402456306093528
+[17:18:20] Lvl_0_Pipe_1_Mod_2_CatBoost fitting and predicting completed
+[17:18:20] Start hyperparameters optimization for Lvl_0_Pipe_1_Mod_3_Tuned_CatBoost ... Time budget is 300.00 secs
+Optimization Progress: 100%|██████████████████████████████████████████████████████████████████████| 101/101 [00:39<00:00,  2.54it/s, best_trial=24, best_value=0.957]
+[17:19:00] Hyperparameters optimization for Lvl_0_Pipe_1_Mod_3_Tuned_CatBoost completed
+[17:19:00] Start fitting Lvl_0_Pipe_1_Mod_3_Tuned_CatBoost ...
+[17:19:01] Fitting Lvl_0_Pipe_1_Mod_3_Tuned_CatBoost finished. score = 0.9456778460085027
+[17:19:01] Lvl_0_Pipe_1_Mod_3_Tuned_CatBoost fitting and predicting completed
+[17:19:01] Time left 536.00 secs
+
+[17:19:01] Layer 1 training completed.
+
+[17:19:01] Blending: optimization starts with equal weights. Score = 0.9488663
+[17:19:01] Blending: iteration 0: score = 0.9544166, weights = [0.10022393 0.14184421 0.13883686 0.08230944 0.53678554]
+[17:19:01] Blending: iteration 1: score = 0.9559518, weights = [0.14771011 0.         0.1567211  0.1372104  0.55835843]
+[17:19:01] Blending: iteration 2: score = 0.9561880, weights = [0.18463904 0.         0.15436608 0.13514857 0.5258463 ]
+[17:19:01] Blending: no improvements for score. Terminated.
+
+[17:19:01] Blending: best score = 0.9561880, best weights = [0.18463904 0.         0.15436608 0.13514857 0.5258463 ]
+[17:19:01] Automl preset training completed in 64.16 seconds
+
+[17:19:01] Model description:
+Final prediction for new objects (level 0) = 
+         0.18464 * (5 averaged models Lvl_0_Pipe_0_Mod_0_LinearL2) +
+         0.15437 * (5 averaged models Lvl_0_Pipe_1_Mod_1_Tuned_LightGBM) +
+         0.13515 * (5 averaged models Lvl_0_Pipe_1_Mod_2_CatBoost) +
+         0.52585 * (5 averaged models Lvl_0_Pipe_1_Mod_3_Tuned_CatBoost) 
+
+{'model': 'LAMA', 'accuracy': 0.90625, 'precision': 0.8837209302325582, 'recall': 0.9743589743589743, 'f1': 0.926829268292683}
+[[20  5]
+ [ 1 38]]
+         model (name)  accuracy  precision    recall        f1  time (sec.) model
+0  LogisticRegression  0.921875   0.947368  0.923077  0.935065          0.0   NaN
+1        RandomForest  0.906250   0.883721  0.974359  0.926829          0.4   NaN
+6                 NaN  0.906250   0.883721  0.974359  0.926829          NaN  LAMA
+3    GradientBoosting  0.890625   0.921053  0.897436  0.909091          3.1   NaN
+4                 SVC  0.875000   0.860465  0.948718  0.902439          0.1   NaN
+5                 KNN  0.859375   0.968750  0.794872  0.873239          2.1   NaN
+2        DecisionTree  0.750000   0.810811  0.769231  0.789474          0.1   NaN
+f1 (>= 0.85): True
